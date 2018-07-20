@@ -1,0 +1,29 @@
+{
+  "name": "femugpe-bot",
+  "version": "1.0.0",
+  "description": "Bot criado para interagir com o pessoal do grupo FEMUG-PE",
+  "main": "index.js",
+  "scripts": {
+    "test": "/marco"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wesmelo/femugPE-bot.git"
+  },
+  "keywords": [
+    "bot",
+    "femugpe",
+    "chatbot",
+    "telegram"
+  ],
+  "author": "wesmelo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wesmelo/femugPE-bot/issues"
+  },
+  "homepage": "https://github.com/wesmelo/femugPE-bot#readme",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.30.0"
+  },
+  "scripts": { "start": "node src/index.js" }
+}

@@ -23,5 +23,5 @@ bot.onText(/\/diga_ola/, (msg) => {
 });
 
 bot.on('new_chat_members', (msg) => {
-  bot.sendMessage(msg.chat.id, `Mais um Front-ender chegando no grupo!\n\nBem-vindo(a) ${msg.from.first_name} (@${msg.from.username})`);
+  bot.sendMessage(msg.chat.id, `Mais um Front-ender chegando no grupo!\n\nSeja bem-vindo(a) ${msg.from.first_name}! Tudo tranquilo? Só na marosidade?`);
 })

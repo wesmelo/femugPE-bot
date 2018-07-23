@@ -12,7 +12,7 @@ O Front-End Meet-Up Group é um projeto que nasceu da necessidade de unir os des
 
 
 ## Ensine novas coisas ao Bot
-[**Faça pull requests!**](https://github.com/wesmelo/femugPE-bot/blob/master/CONTRIBUTING.md)
+[**Faça pull requests!**](/CONTRIBUTING.md)
 
 Se você tem alguma ideia para o bot, como uma lista de saudações, informar se vai chover hoje, crie uma issue e bora discutir!
 _...ok, este bot ainda é meio bobo, mas você pode ajudar ele a crescer ;)_

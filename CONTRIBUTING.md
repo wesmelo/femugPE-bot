@@ -1,4 +1,14 @@
-# Contribuindo
+# Curtiu o bot e quer ajudar? Bora nessa!
+
+Primeiramente, **obrigado por ajudar**! O bot é um projeto aberto, sem fins lucrativos, apenas para praticar nossas skills :facepunch:
+
+Então, se ja conhecesse o procedimento de desenvolvimento, é só seguir o [flow](https://guides.github.com/introduction/flow/)
+
+* Faça um `fork` do projeto.
+* Utilize uma `branch` nova. Mantemos a organização de ter cada coisa na sua devida branch.
+* Ao terminar, faça um `Pull Request` para o branch `master`.
+
+## Contribuindo
 
 Atualmente, o bot utiliza a [_Node.js Telegram Bot API_](https://github.com/yagop/node-telegram-bot-api) para interação com o servidor de telegram.
 
@@ -9,7 +19,8 @@ npm install --save node-telegram-bot-api
 ## Testar ajustes no bot
 
 Para que não haja intermitência no bot em _produção_ enquanto estamos atualizando, há um bot de teste, o [Josnel Test Bot](t.me/JosnelTestBot).
-Token do bot de teste: ~623318107:AAE1TZmdQn1KdyoWRc3Kq7lFNHglPRsbiWg~
+Token do bot de teste: ~623318107:AAE1TZmdQn1KdyoWRc3Kq7lFNHglPRsbiWg~.
+
 No código, substitua o:
 
 ``
@@ -22,7 +33,9 @@ por:
 const TELEGRAM_BOT_TOKEN = 'token acima';
 ``
 
-## Validando
+## Host e Servidor
+
+O bot atualmente está rodando no [`glitch.com`](https://glitch.com/edit/#!/wonderful-rail?path=README.md:1:0), mantendo o funcionando _on time_.
 
 Para validar se as atualizações estão funcionando normalmente, no código, possui uma linha que habita a criação da execução local
 
@@ -32,6 +45,6 @@ const bot = new TelegramBot(TELEGRAM_BOT_TOKEN, { polling: true })
 
 >**Polling** - É uma tecnologia não tão popular assim... mas permite rodar o chatbot, no caso, localmente sem qualquer endereço online nem tanto servidor dedicado.
 
-## Host
+Obrigado pela ajuda!
 
-O atualmente está rodando no [glitch.com](https://glitch.com/edit/#!/wonderful-rail?path=README.md:1:0), mantendo o bot funcionando _on time_.
+Caso tenha alguma dúvida ou ideia relativas ao projeto, crie uma issue e bora discutir!

@@ -15,7 +15,7 @@ const bot = new TelegramBot(TELEGRAM_BOT_TOKEN, { polling: true })
 
 bot.onText(/\/start/, (msg) => welcome.map(value => bot.sendMessage(msg.chat.id, value)));
 
-bot.onText(/\/diga_ola/, (msg) => bot.sendMessage(msg.chat.id, getRandom(best_regards(msg))));
+bot.onText(/\/eae/, (msg) => bot.sendMessage(msg.chat.id, getRandom(best_regards(msg))));
 
 bot.onText(/\/joke/, (msg) => bot.sendMessage(msg.chat.id, getRandom(joke)));
 

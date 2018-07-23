@@ -14,10 +14,10 @@ const bot = new TelegramBot(TELEGRAM_BOT_TOKEN, { polling: true })
 
 bot.onText(/\/start/, (msg) => welcome.map(value => bot.sendMessage(msg.chat.id, value)));
 
-bot.onText(/\/diga_ola/, (msg) => bot.sendMessage(msg.chat.id, best_regards(best_regards)))
+bot.onText(/\/diga_ola/, (msg) => bot.sendMessage(msg.chat.id, best_regards(best_regards)));
 
-bot.onText(/\/joke/, (msg) => bot.sendMessage(msg.chat.id, getRandom(joke)))
+bot.onText(/\/joke/, (msg) => bot.sendMessage(msg.chat.id, getRandom(joke)));
 
-bot.on('new_chat_members', (msg) => bot.sendMessage(msg.chat.id, new_member))
+bot.on('new_chat_members', (msg) => bot.sendMessage(msg.chat.id, new_member));
 
 console.log('bot server running...');

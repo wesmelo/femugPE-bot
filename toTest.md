@@ -31,3 +31,7 @@ const bot = new TelegramBot(TELEGRAM_BOT_TOKEN, { polling: true })
 ``
 
 >**Polling** - É uma tecnologia não tão popular assim... mas permite rodar o chatbot, no caso, localmente sem qualquer endereço online nem tanto servidor dedicado.
+
+## Host
+
+O atualmente está rodando no [glitch.com](https://glitch.com/edit/#!/wonderful-rail?path=README.md:1:0), mantendo o bot funcionando _on time_.

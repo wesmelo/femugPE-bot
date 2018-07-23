@@ -4,7 +4,7 @@
   "description": "Bot criado para interagir com o pessoal do grupo FEMUG-PE",
   "main": "index.js",
   "scripts": {
-    "test": "/marco"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/wesmelo/femugPE-bot#readme",
   "dependencies": {
+    "dotenv": "^6.0.0",
     "node-telegram-bot-api": "^0.30.0"
-  },
-  "scripts": { "start": "node src/index.js" }
+  }
 }

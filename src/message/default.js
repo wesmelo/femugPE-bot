@@ -5,7 +5,7 @@ module.exports = {
         "Faça parte do nosso grupo!\nConvite: https://bit.ly/2uOzSxs \nMeetup: https://bit.ly/2LtCpYx \nFacebook: https://bit.ly/2zTiQEp"
     ],
     best_regards: (message) => {
-        [
+        return [
             `Beep boop, ${message.from.first_name}`,
             `Faaaaaaala ${message.from.first_name}!`,
             `Dale ${message.from.first_name}!`,

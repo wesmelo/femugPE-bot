@@ -1,9 +1,10 @@
+require('dotenv').load()
 process.env.NTBA_FIX_319 = 1;
 
 const TelegramBot = require('node-telegram-bot-api')
 const { TELEGRAM_BOT_TOKEN } = process.env;
-const { welcome, best_regards, joke, new_member  } = require('./message/default')
-const { getRandom } = require('./helpers/random')
+const { welcome, best_regards, joke, new_member  } = require('./src/message/default')
+const { getRandom } = require('./src/helpers/random')
 
 if (!TELEGRAM_BOT_TOKEN) {
   console.error('Seems like you forgot to pass Telegram Bot Token. I can not proceed...');
@@ -14,7 +15,7 @@ const bot = new TelegramBot(TELEGRAM_BOT_TOKEN, { polling: true })
 
 bot.onText(/\/start/, (msg) => welcome.map(value => bot.sendMessage(msg.chat.id, value)));
 
-bot.onText(/\/diga_ola/, (msg) => bot.sendMessage(msg.chat.id, best_regards(best_regards)));
+bot.onText(/\/diga_ola/, (msg) => bot.sendMessage(msg.chat.id, getRandom(best_regards(msg))));
 
 bot.onText(/\/joke/, (msg) => bot.sendMessage(msg.chat.id, getRandom(joke)));
 

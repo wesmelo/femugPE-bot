@@ -19,9 +19,9 @@ module.exports.returnSearch = (calculateTemperature) => (result) => {
         if (!condition.text.indexOf('Cloudy')) {
             return `É bom levar um guarda-chuva, talvez chova hoje! \n Temperatura de ${temp} pela ${getGreetingTime(moment())} = )`
         }
-        return `Hoje está de boa, temperatura de ${temp}˚, nessa ${getGreetingTime(moment())} linda.. : )`
+        return `Hoje está de boa, temperatura de ${temp}˚, nessa ${getGreetingTime(moment())} linda... : )`
     } catch (err) {
-        throw new Error('Error: returnSearch function tratment')
+        throw new Error('Error: returnSearch function treatment')
     }
 }
 

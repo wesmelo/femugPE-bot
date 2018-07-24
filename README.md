@@ -9,7 +9,8 @@
 <p align="center">
   <sub> Built with ❤︎ by
   <a href="https://github.com/wesmelo" target="_blank" rel="noopener">Wesley Melo</a> &
-  <a href="https://github.com/higordiego" target="_blank" rel="noopener">Higor Diego</a>
+  <a href="https://github.com/higordiego" target="_blank" rel="noopener">Higor Diego</a>,
+  <a href="https://github.com/gustavonovaes" target="_blank" rel="noopener">Gustavo Novaes</a>
 </p>
 
 

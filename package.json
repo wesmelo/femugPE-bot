@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/wesmelo/femugPE-bot#readme",
   "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
     "dotenv": "^6.0.0",
     "node-telegram-bot-api": "^0.30.0"
   }

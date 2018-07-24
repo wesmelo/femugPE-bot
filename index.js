@@ -5,6 +5,7 @@ const TelegramBot = require('node-telegram-bot-api')
 const { TELEGRAM_BOT_TOKEN } = process.env;
 const { welcome, best_regards, joke, new_member  } = require('./src/message/default')
 const { getRandom } = require('./src/helpers/random')
+const { leanResponse, tratmentSearch, searchJobs  } = require('./src/services/github')
 
 if (!TELEGRAM_BOT_TOKEN) {
   console.error('Seems like you forgot to pass Telegram Bot Token. I can not proceed...');
@@ -19,6 +20,16 @@ bot.onText(/\/diga_ola/, (msg) => bot.sendMessage(msg.chat.id, getRandom(best_re
 
 bot.onText(/\/joke/, (msg) => bot.sendMessage(msg.chat.id, getRandom(joke)));
 
+bot.onText(/\/jobs/, async (msg) => {
+  try {
+    const listJobs = await searchJobs(tratmentSearch, leanResponse)
+    listJobs.map(value => bot.sendMessage(msg.chat.id, `${value.title}\n ${value.link}\n\n`))
+  } catch (err) {
+    bot.sendMessage(msg.chat.id, `Ocorreu um erro na busca, desculpa! : /`)
+  }
+})
+
 bot.on('new_chat_members', (msg) => bot.sendMessage(msg.chat.id, new_member));
 
 console.log('bot server running...');
+

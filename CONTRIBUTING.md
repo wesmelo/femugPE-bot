@@ -2,11 +2,11 @@
 
 Primeiramente, **obrigado por ajudar**! O bot é um projeto aberto, sem fins lucrativos, apenas para praticar nossas skills e contribuir com a comunidade :facepunch:
 
-Então, se ja conhece o procedimento de desenvolvimento, é só seguir o [flow](https://guides.github.com/introduction/flow/)
+Então, se já conhece o procedimento de desenvolvimento, é só seguir o [flow](https://guides.github.com/introduction/flow/)
 
 * Faça um `fork` do projeto.
 * Utilize uma `branch` nova. Manteremos a organização de ter cada coisa na sua devida branch.
-* Ao terminar, faça um `Pull Request` para o branch `master`.
+* Ao terminar, faça um **`pull request`** para a branch `master`.
 
 ## Contribuindo
 

@@ -6,7 +6,7 @@ const {
 } = require('../services/yahoo')
 
 module.exports = bot => ({
-  regexp: /^\/weather$/,
+  regexp: /^\/weather/,
   callback(msg, _) {
     searchWeather(returnSearch, calculateTemperature)
       .then(response => {

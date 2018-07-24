@@ -9,7 +9,7 @@ const parseJobs = jobList =>
   jobList.map(job => `${job.title}\n ${job.link}\n\n`)
 
 module.exports = bot => ({
-  regexp: /^\/jobs$/,
+  regexp: /^\/jobs/,
   callback(msg, _) {
     const chatId = msg.chat.id
 

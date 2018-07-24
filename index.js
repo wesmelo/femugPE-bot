@@ -15,6 +15,6 @@ const registerCommands = require('./src/helpers/registerCommands')
 const bot = new TelegramBot(TELEGRAM_BOT_TOKEN, { polling: true })
 registerCommands(bot)
 
-bot.on('new_chat_members', msg => bot.sendMessage(msg.chat.id, new_member))
+bot.on('new_chat_members', msg => bot.sendMessage(msg.chat.id, new_member(msg)))
 
 console.log('bot server running...')

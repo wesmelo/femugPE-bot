@@ -23,6 +23,7 @@ module.exports = {
         'apois viu',
         'e arroi'
     ],
+    error_default: `Ocorreu um erro na busca, desculpa! : /`,
     new_member: (message) => {
         return `Mais um Front-ender chegando no grupo!\n\nSeja bem-vindo(a) ${message.from.first_name}! Tudo tranquilo? Só na marosidade?`
     }

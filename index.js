@@ -43,6 +43,3 @@ bot.onText(/\/weather/, async (msg) => {
 bot.on('new_chat_members', (msg) => bot.sendMessage(msg.chat.id, new_member));
 
 console.log('bot server running...');
-
-
-455824

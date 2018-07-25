@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://t.me/femugPE_bot" title="Click to see" target="_blank"><img src="https://github.com/wesmelo/femugPE-bot/blob/master/src/img/FEMUG_bot.png" alt="Alfred Bot, um chatbot para telegram" width="200"></a>
+  <a href="https://t.me/femugPE_bot" title="Click to join :D" target="_blank"><img src="https://github.com/wesmelo/femugPE-bot/blob/master/src/img/FEMUG_bot.png" alt="Alfred Bot, um chatbot para telegram" width="200"></a>
   <br>
   FEMUG-PE bot
 </h1>

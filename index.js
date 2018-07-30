@@ -26,7 +26,7 @@ bot.onText(/\/joke/, (msg) => bot.sendMessage(msg.chat.id, getRandom(joke)))
 bot.onText(/\/new/, async (msg) => {
   try {
     const listJobs = await searchNoticies(leanResponseNoticies)
-    listJobs.map(value => bot.sendMessage(msg.chat.id, `${value.title}\n ${value.link}\n\n`))
+    listJobs.map(value => bot.sendMessage(msg.chat.id, `${value.title}\n ${value.link}\n\n`,{disable_web_page_preview: true}))
   } catch (err) {
     bot.sendMessage(msg.chat.id, error_default)
   }

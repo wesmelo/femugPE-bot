@@ -5,7 +5,8 @@ const TelegramBot = require('node-telegram-bot-api')
 const { TELEGRAM_BOT_TOKEN } = process.env;
 const { welcome, best_regards, joke, new_member, error_default  } = require('./src/message/default')
 const { getRandom } = require('./src/helpers/random')
-const { leanResponse, tratmentSearch, searchJobs  } = require('./src/services/github')
+const { leanResponse: leanResponseGithub, tratmentSearch, searchJobs  } = require('./src/services/github')
+const { leanResponse: leanResponseNoticies, searchNoticies } = require('./src/services/frontendfront')
 const { searchWeather, returnSearch, calculateTemperature } = require('./src/services/yahoo')
 
 if (!TELEGRAM_BOT_TOKEN) {
@@ -22,9 +23,18 @@ bot.onText(/\/eae/, (msg) => bot.sendMessage(msg.chat.id, getRandom(best_regards
 bot.onText(/\/joke/, (msg) => bot.sendMessage(msg.chat.id, getRandom(joke)))
 
 
+bot.onText(/\/new/, async (msg) => {
+  try {
+    const listJobs = await searchNoticies(leanResponseNoticies)
+    listJobs.map(value => bot.sendMessage(msg.chat.id, `${value.title}\n ${value.link}\n\n`))
+  } catch (err) {
+    bot.sendMessage(msg.chat.id, error_default)
+  }
+})
+
 bot.onText(/\/jobs/, async (msg) => {
   try {
-    const listJobs = await searchJobs(tratmentSearch, leanResponse)
+    const listJobs = await searchJobs(tratmentSearch, leanResponseGithub)
     listJobs.map(value => bot.sendMessage(msg.chat.id, `${value.title}\n ${value.link}\n\n`))
   } catch (err) {
     bot.sendMessage(msg.chat.id, error_default)

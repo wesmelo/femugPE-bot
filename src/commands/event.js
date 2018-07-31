@@ -2,7 +2,7 @@ const { getRandom } = require('../helpers/random')
 const { searchEvents, leanResponseEvents } = require('../services/github')
 
 module.exports = bot => ({
-    regexp: /^\/events/,
+    regexp: /^\/news/,
     async callback(msg, _) {
         try {
             const listEvents = await searchEvents(leanResponseEvents)

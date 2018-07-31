@@ -9,6 +9,8 @@ module.exports.leanResponse = (html) => {
     })).get()
 }
 
+module.exports.parseJobs = jobList => jobList.map(job => `${job.title}\n ${job.link}\n\n`)
+
 module.exports.leanResponseEvents = (data) => data.map(value => ({
     title: value.title,
     link: value.html_url

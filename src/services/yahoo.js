@@ -31,7 +31,6 @@ module.exports.searchWeather = async (returnSearch, calculateTemperature) => {
         const response = await axios({ url: process.env.YAHOO_WEATHER, method: 'get' })
         return returnSearch(calculateTemperature)(response)
     } catch (err) {
-        console.log(err)
         throw new Error("Error: search weather yahoo..")
     }
 }

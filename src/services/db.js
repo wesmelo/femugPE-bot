@@ -9,15 +9,15 @@ const getUsersPending = () => {
   return db.get('usersPendingConfirmation')
 }
 
-const addPendingUser = (chatId, userId, expireDate) => {
+const addPendingUser = (chatId, user, expireDate) => {
   return getUsersPending()
-    .push({ chatId, userId, expireDate })
+    .push({ chatId, user, expireDate })
     .write()
 }
 
-const removePendingUser = userId => {
+const removePendingUser = user => {
   return getUsersPending()
-    .remove({ userId })
+    .remove({ user })
     .write()
 }
 

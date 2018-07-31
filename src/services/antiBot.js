@@ -12,7 +12,7 @@ const TIME_FOR_CONFIRMATION = 12 * 60 * 60 * 1000
 
 const onNewChatMembers = (bot, welcomeMessageFactory) => msg => {
   const chatId = msg.chat.id
-  const fromId = msg.from.id
+  const user = msg.from
   const reply_markup = JSON.stringify({
     inline_keyboard: [
       [
@@ -30,7 +30,7 @@ const onNewChatMembers = (bot, welcomeMessageFactory) => msg => {
   })
 
   const expireDate = (msg.date * 1000) + TIME_FOR_CONFIRMATION
-  addPendingUser(chatId, fromId, expireDate)
+  addPendingUser(chatId, user, expireDate)
 }
 
 const onCallbackQuery = bot => cq => {
@@ -39,10 +39,10 @@ const onCallbackQuery = bot => cq => {
     return
   }
 
-  const removedUsers = removePendingUser(cq.from.id)
+  const removedUsers = removePendingUser(cq.from)
   if (!removedUsers.length) {
     return bot.answerCallbackQuery(cq.id, {
-      text: 'Eu já sabia disso... ;)',
+      text: 'Eu já sei que você não é um bot... ;)',
       showAlert: true
     })
   }
@@ -57,17 +57,17 @@ const kickUnconfirmedUsers = bot => () => {
   const now = Date.now()
   const expiredUsers = getExpiredUsers(now)
 
-  expiredUsers.map(user => {
+  expiredUsers.map(expired => {
     Promise.resolve()
-      .then(_ => bot.getChatMember(user.chatId, user.userId))
-      .then(_ => bot.kickChatMember(user.chatId, user.userId))
+      .then(_ => bot.getChatMember(expired.chatId, expired.user.id))
+      .then(_ => bot.kickChatMember(expired.chatId, expired.user.id))
       .then(_ => {
-        bot.sendMessage(user.chatId, `Usuário ${user.userId} removido por não confirmar que não é um bot...`)
-        removePendingUser(user.userId)
+        bot.sendMessage(expired.chatId, `Usuário ${expired.user.first_name} removido por não confirmar que não é um bot...`)
+        removePendingUser(expired.user)
       })
       .catch(err => {
         if (err.response.body.description.search('USER_NOT_PARTICIPANT') > 0) {
-          return removePendingUser(user.userId)
+          return removePendingUser(expired.user)
         }
         console.error(err)
       })

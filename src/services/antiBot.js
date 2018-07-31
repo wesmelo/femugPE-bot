@@ -25,7 +25,7 @@ const onNewChatMembers = (bot, welcomeMessageFactory) => msg => {
   })
 
   bot.sendMessage(chatId, welcomeMessageFactory(msg), {
-    reply_markup, 
+    reply_markup,
     reply_to_message_id: msg.message_id
   })
 
@@ -53,21 +53,31 @@ const onCallbackQuery = bot => cq => {
   })
 }
 
-const checkForUnconfirmedUsers = bot => () => {
+const kickUnconfirmedUsers = bot => () => {
   const now = Date.now()
   const expiredUsers = getExpiredUsers(now)
 
   expiredUsers.map(user => {
-    bot.kickChatMember(user.chatId, user.userId).then(() => {
-      removePendingUser(user.userId)
-    })
+    Promise.resolve()
+      .then(_ => bot.getChatMember(user.chatId, user.userId))
+      .then(_ => bot.kickChatMember(user.chatId, user.userId))
+      .then(_ => {
+        bot.sendMessage(user.chatId, `Usuário ${user.userId} removido por não confirmar que não é um bot...`)
+        removePendingUser(user.userId)
+      })
+      .catch(err => {
+        if (err.response.body.description.search('USER_NOT_PARTICIPANT') > 0) {
+          return removePendingUser(user.userId)
+        }
+        console.error(err)
+      })
   })
 }
 
 const antiBot = (bot, welcomeMessageFactory) => {
   bot.on('new_chat_members', onNewChatMembers(bot, welcomeMessageFactory))
   bot.on('callback_query', onCallbackQuery(bot))
-  setInterval(checkForUnconfirmedUsers(bot), CHECK_BAN_TIMEOUT)
+  setInterval(kickUnconfirmedUsers(bot), CHECK_BAN_TIMEOUT)
 }
 
 module.exports = antiBot

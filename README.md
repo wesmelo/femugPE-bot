@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://t.me/femugPE_bot"><img src="https://github.com/wesmelo/femugPE-bot/blob/master/src/img/FEMUG_bot.png" alt="Alfred Bot, um chatbot para telegram" width="200"></a>
+  <a href="https://t.me/femugPE_bot" title="Click to join :D" target="_blank"><img src="https://github.com/wesmelo/femugPE-bot/blob/master/src/img/FEMUG_bot.png" alt="Alfred Bot, um chatbot para telegram" width="200"></a>
   <br>
   FEMUG-PE bot
 </h1>
@@ -8,8 +8,9 @@
 
 <p align="center">
   <sub> Built with ❤︎ by
-  <a href="https://github.com/wesmelo" target="_blank" rel="noopener">Wesley Melo</a> &
-  <a href="https://github.com/higordiego" target="_blank" rel="noopener">Higor Diego</a>
+  <a href="https://github.com/wesmelo" target="_blank" rel="noopener">Wesley Melo</a>,
+  <a href="https://github.com/higordiego" target="_blank" rel="noopener">Higor Diego</a> &
+  <a href="https://github.com/gustavonovaes" target="_blank" rel="noopener">Gustavo Novaes</a>
 </p>
 
 
@@ -24,7 +25,7 @@ Se você tem alguma ideia para o bot, como uma lista de saudações, informar se
 _...ok, este bot ainda é meio bobo, mas você pode ajudar ele a crescer ;)_
 
 ## Sobre o FEMUG
-O Front-End Meet-Up Group é um projeto que nasceu da necessidade de unir os desenvolvedores para que o acesso à informação seja feito em qualquer lugar que haja interesse do aprendizado.
+O Front-End Meet-Up Group, _A.K.A [FEMUG](https://github.com/FEMUGPE/FEMUGPE)_, é um projeto que nasceu da necessidade de unir os desenvolvedores para que o acesso à informação seja feito em qualquer lugar que haja interesse do aprendizado.
 
 ### Faça parte do nosso grupo!
  - Convite: https://bit.ly/2uOzSxs 

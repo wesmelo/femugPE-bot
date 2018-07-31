@@ -1,4 +1,4 @@
-const { getRandom } = require('../helpers/random')
+const { error_default } = require('../message/default')
 const { searchEvents, leanResponseEvents } = require('../services/github')
 
 module.exports = bot => ({

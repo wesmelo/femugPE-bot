@@ -29,6 +29,7 @@
     "glob": "^7.1.2",
     "lowdb": "^1.0.0",
     "moment": "^2.22.2",
+    "moment-timezone": "^0.5.21",
     "node-telegram-bot-api": "^0.30.0"
   }
 }

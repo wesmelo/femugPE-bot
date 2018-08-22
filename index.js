@@ -9,12 +9,15 @@ if (!TELEGRAM_BOT_TOKEN) {
 process.env.NTBA_FIX_319 = 1
 const TelegramBot = require('node-telegram-bot-api')
 
-const { new_member } = require('./src/message/default')
-const registerCommands = require('./src/helpers/registerCommands')
+const { new_member } = require('./src/message/default'),
+  registerCommands = require('./src/helpers/registerCommands')
+  antiBot = require('./src/services/antiBot')
 
 const bot = new TelegramBot(TELEGRAM_BOT_TOKEN, { polling: true })
 registerCommands(bot)
-
-bot.on('new_chat_members', msg => bot.sendMessage(msg.chat.id, new_member(msg)))
+antiBot(bot, new_member)
 
 console.log('bot server running...')
+
+
+

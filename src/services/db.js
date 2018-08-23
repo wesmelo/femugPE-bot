@@ -11,13 +11,16 @@ const getUsersPending = () => {
 
 const addPendingUser = (chatId, user, expireDate) => {
   return getUsersPending()
-    .push({ chatId, user, expireDate })
+    .push({ chatId, user: {id: user.id, first_name: user.first_name}, expireDate })
     .write()
+  
+  console.log({ chatId, user: {id: user.id, first_name: user.first_name}, expireDate })
 }
+
 
 const removePendingUser = user => {
   return getUsersPending()
-    .remove({ user })
+    .remove({ user: {id: user.id} })
     .write()
 }
 

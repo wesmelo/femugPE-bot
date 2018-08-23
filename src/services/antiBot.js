@@ -4,11 +4,12 @@ const {
   getExpiredUsers
 } = require('../services/db')
 
-// 1 minute
+// 1 minute == 60 * 1000
 const CHECK_BAN_TIMEOUT = 60 * 1000
 
-// 12 hours
-const TIME_FOR_CONFIRMATION = 12 * 60 * 60 * 1000
+// 12 hours == 12 * 60 * 60 * 1000
+const TIME_FOR_CONFIRMATION = 2 * 60 * 60 * 1000
+
 
 const onNewChatMembers = (bot, welcomeMessageFactory) => msg => {
   const chatId = msg.chat.id
@@ -42,13 +43,13 @@ const onCallbackQuery = bot => cq => {
   const removedUsers = removePendingUser(cq.from)
   if (!removedUsers.length) {
     return bot.answerCallbackQuery(cq.id, {
-      text: 'Eu já sei que você não é um bot... ;)',
+      text: 'Eu já sei que você não é um bot ashuahsuahs',
       showAlert: true
     })
   }
 
   bot.answerCallbackQuery(cq.id, {
-    text: 'Obrigado por não ser um bot! xD',
+    text: 'Obrigado por não ser um bot! =D',
     showAlert: true
   })
 }

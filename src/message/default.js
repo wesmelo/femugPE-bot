@@ -2,7 +2,7 @@ module.exports = {
   welcome: [
     'Beep beep boop\n\nOlá, eu sou o bot do grupo FEMUG-PE',
     'O Front-End Meet-Up Group é um projeto que nasceu da necessidade de unir os desenvolvedores para que o acesso à informação seja feito em qualquer lugar que haja interesse do aprendizado.',
-    'Faça parte do nosso grupo!\nConvite: https://bit.ly/2uOzSxs \nMeetup: https://bit.ly/2LtCpYx \nFacebook: https://bit.ly/2zTiQEp'
+    'Faça parte do nosso grupo!\nConvite: https://goo.gl/qp7Jrw \nMeetup: https://bit.ly/2LtCpYx \nFacebook: https://bit.ly/2zTiQEp'
   ],
   best_regards: message => {
     return [

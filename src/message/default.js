@@ -17,7 +17,15 @@ module.exports = {
       `Só na marosidade, ${message.from.first_name}?`
     ]
   },
-  joke: ['dispense', 'é tu nada, visse', 'apois viu', 'e arroi'],
+  joke: [`dispense`, 
+         `é tu nada, visse`,
+         `apois viu`,
+         `e arroi`,
+        `qual a cidade que todo mundo sabe SQL?\n\nJoinville`,
+        `e o país de quem gosta de nosql?\n\nMongo-lia`,
+        `e o país que é o maior root Linux?\n\nSudão`,
+        `qual cidade todos programam em Pascal?\n\nDelfinópolis`,
+        `por que a linguagem C não pode frequentar a alta sociedade?\n\nPorque ela não tem classe`],
   error_default: `Ocorreu um erro na busca, desculpa! : /`,
   new_member: message => {
     return `Mais um Front-ender chegando no grupo!\n\nSeja bem-vindo(a) ${message.from.first_name}! Tudo tranquilo? Só na marosidade?`

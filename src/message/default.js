@@ -20,6 +20,7 @@ module.exports = {
   joke: [`dispense`, 
          `é tu nada, visse`,
          `apois viu`,
+         `essa musica do strokes e tao boa q vou ter q repetilia`,
          `e arroi`,
         `qual a cidade que todo mundo sabe SQL?\n\nJoinville`,
         `e o país de quem gosta de nosql?\n\nMongo-lia`,

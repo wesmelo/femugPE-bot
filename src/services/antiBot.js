@@ -18,7 +18,7 @@ const onNewChatMembers = (bot, welcomeMessageFactory) => msg => {
     inline_keyboard: [
       [
         {
-          text: 'Click aqui para confirmar que você não é um bot ( ͡° ͜ʖ ͡°)',
+          text: 'Click AQUI se tu náo é um bot ( ° ͜ʖ ͡°)',
           callback_data: JSON.stringify({ new_chat_members: true })
         }
       ]
@@ -43,13 +43,13 @@ const onCallbackQuery = bot => cq => {
   const removedUsers = removePendingUser(cq.from)
   if (!removedUsers.length) {
     return bot.answerCallbackQuery(cq.id, {
-      text: 'Eu já sei que você não é um bot ashuahsuahs',
+      text: ' ᶘ ᵒᴥᵒ ᶅ Tlgd que tu não é um bot ashuahsuahs',
       showAlert: true
     })
   }
 
   bot.answerCallbackQuery(cq.id, {
-    text: 'Obrigado por não ser um bot! =D',
+    text: 'Valeu por não ser um bot! ( ͡~ ͜ʖ ͡°)',
     showAlert: true
   })
 }
@@ -63,7 +63,7 @@ const kickUnconfirmedUsers = bot => () => {
       .then(_ => bot.getChatMember(expired.chatId, expired.user.id))
       .then(_ => bot.kickChatMember(expired.chatId, expired.user.id))
       .then(_ => {
-        bot.sendMessage(expired.chatId, `Usuário ${expired.user.first_name} removido por não confirmar que não é um bot...`)
+        bot.sendMessage(expired.chatId, `Usuário ${expired.user.first_name} removido por não confirmar que não é um bot ಠ_ಠ`)
         removePendingUser(expired.user)
       })
       .catch(err => {

@@ -29,7 +29,7 @@ module.exports = {
         `por que a linguagem C não pode frequentar a alta sociedade?\n\nPorque ela não tem classe`],
   error_default: `Ocorreu um erro na busca, desculpa! : /`,
   new_member: message => {
-    return `Mais um Front-ender chegando no grupo!\n\nSeja bem-vindo(a) ${message.from.first_name}! Tudo tranquilo? Só na marosidade?`
+    return `Mais um Front-ender chegando no grupo!\n\nSeja bem-vindo(a) ${message.from.first_name}! Tudo tranquilo? Só na marosidade? Não esquece de clicar nesse botão pra nao ser quitado daqui blz!?`
   },
   hacktober: [
     'Quer participar da #Hacktoberfest?\n\nSite sobre o Hacktoberfest:\nhttps://hacktoberfest.digitalocean.com/\n\nGuia prático sobre como contribuir no GitHub:\nhttps://blog.da2k.com.br/2015/02/04/git-e-github-do-clone-ao-pull-request/',

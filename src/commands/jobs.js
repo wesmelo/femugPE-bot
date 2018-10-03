@@ -13,7 +13,7 @@ module.exports = bot => ({
     try {
       const jobList = await searchJobs(tratmentSearch, leanResponse)
       const jobs = parseJobs(jobList)
-      jobs.map(job => bot.sendMessage(msg.chat.id, job, { disable_web_page_preview: true }))
+      jobs.map(job => bot.sendMessage(msg.chat.id, job, { disable_web_page_preview: false }))
     } catch (err) {
       console.log(err)
       bot.sendMessage(msg.chat.id, error_default)

@@ -34,7 +34,7 @@ module.exports = {
   hacktober: [
     'Quer participar da #Hacktoberfest?\n\nSite sobre o Hacktoberfest:\nhttps://hacktoberfest.digitalocean.com/\n\nGuia prático sobre como contribuir no GitHub:\nhttps://blog.da2k.com.br/2015/02/04/git-e-github-do-clone-ao-pull-request/',
     'Não sabe que projeto contribuir?\n\nCuradoria de projetos brasileiros para contribuir:\nhttps://medium.com/@jessicatemporal/projetos-brasileiros-para-contribuir-nesse-hacktoberfest-vers%C3%A3o-2018-4925959b9411\n\nLista Maravilhosa de Projetos Open-Source:\nhttps://github.com/camilatigre/listamaravilhosaopensource\n\nDivertidalista:\nhttps://github.com/training-center/divertidalista',
-    'Participe do evento TOP que vai rolar próxima semana (06/10):\nhttps://www.sympla.com.br/hacktoberfest-em-recife__367675',
+    'Participe dos eventos TOP que vão rolar nas próximas semanas:\nhttps://www.sympla.com.br/hacktoberfest-em-recife__367675\nhttps://conteudo.concrete.com.br/hacktoberfest-concrete',
     'Para quem quer achar issues específicas. Use a barra de pesquisa do github com state:open label:{OqVoceProcura}.\nex: state:open label:UI (para procurar por issues marcadas como UI)\n\nE para quem é novato ainda e não sabe muito no que pode ajudar, procure por state:open label:first-timers-only. São issues examente para quem nunca contribuiu'
   ]
 }

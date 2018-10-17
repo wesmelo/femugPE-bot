@@ -28,7 +28,7 @@ _...ok, este bot ainda é meio bobo, mas você pode ajudar ele a crescer ;)_
 O Front-End Meet-Up Group, _A.K.A [FEMUG](https://github.com/FEMUGPE/FEMUGPE)_, é um projeto que nasceu da necessidade de unir os desenvolvedores para que o acesso à informação seja feito em qualquer lugar que haja interesse do aprendizado.
 
 ### Faça parte do nosso grupo!
- - Convite: https://bit.ly/2uOzSxs 
+ - Convite: https://goo.gl/qp7Jrw 
  - Meetup: https://bit.ly/2LtCpYx 
  - Facebook: https://bit.ly/2zTiQEp
 
